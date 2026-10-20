@@ -1,0 +1,1199 @@
+
+
+:root {
+    --azul-profundo: #18344D;
+    --azul-gris: #54758D;
+    --gris-azulado: #D8E2EB;
+    --fondo-claro: #F5F7F9;
+    --blanco: #FFFFFF;
+    --texto: #263746;
+
+    --page-background: #F5F7F9;
+    --text-color: #263746;
+    --text-secondary: #54758D;
+    --card-background: #FFFFFF;
+    --border-color: #D8E2EB;
+    --navbar-background: #18344D;
+}
+
+:root[data-theme="dark"] {
+    --fondo-claro: #101B2A;
+    --texto: #F1F5F9;
+    --page-background: #101B2A;
+    --text-color: #F1F5F9;
+    --text-secondary: #B8C7D8;
+    --card-background: #1B2A3B;
+    --border-color: #34485D;
+    --navbar-background: #152438;
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--page-background);
+    color: var(--text-color);
+    line-height: 1.6;
+    transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+main h2 {
+    color: var(--text-color);
+}
+
+
+header {
+    background-color: var(--azul-profundo);
+    color: var(--blanco);
+    padding: 24px 8%;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 32px;
+    letter-spacing: 2px;
+}
+
+header p {
+    margin-bottom: 0;
+    color: var(--gris-azulado);
+}
+
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 48px 24px;
+}
+
+
+main h2 {
+    color: var(--text-color);
+    font-size: 32px;
+}
+
+footer {
+    background-color: var(--azul-profundo);
+    color: var(--blanco);
+    padding: 20px 8%;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+
+
+.navbar {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+}
+
+.logo {
+    color: var(--blanco);
+    text-decoration: none;
+    font-size: 26px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    color: var(--blanco);
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--gris-azulado);
+}
+
+
+
+@media (max-width: 650px) {
+    .navbar {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 14px;
+    }
+}
+
+
+
+
+.hero {
+    min-height: 480px;
+    display: flex;
+    align-items: center;
+    padding: 64px 7%;
+    border-radius: 20px;
+    overflow: hidden;
+    color: var(--blanco);
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(15, 39, 59, 0.88),
+            rgba(15, 39, 59, 0.25)
+        ),
+        url("https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=1800&q=85");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content {
+    max-width: 620px;
+}
+
+.eyebrow {
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    color: #D8E2EB;
+}
+
+.hero h1 {
+    font-size: clamp(36px, 5vw, 60px);
+    line-height: 1.12;
+    margin: 18px 0;
+}
+
+.hero-description {
+    max-width: 500px;
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 28px;
+}
+
+.btn-primary {
+    display: inline-block;
+    background-color: #FFFFFF;
+    color: #18344D;
+    text-decoration: none;
+    padding: 14px 26px;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: transform 0.3s ease,
+                background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #D8E2EB;
+    transform: translateY(-2px);
+}
+
+
+
+@media (max-width: 650px) {
+    .hero {
+        min-height: 420px;
+        padding: 36px 24px;
+        border-radius: 12px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero-description {
+        font-size: 15px;
+    }
+}
+
+
+
+.destinations {
+    padding: 80px 0;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.eyebrow-dark {
+    color: var(--azul-gris);
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.section-heading h2 {
+    color: var(--azul-profundo);
+    font-size: clamp(28px, 4vw, 38px);
+    margin: 12px 0;
+}
+
+.section-heading > p:last-child {
+    color: #627384;
+}
+
+.destination-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.destination-card {
+    background-color: var(--blanco);
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid var(--gris-azulado);
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.destination-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 28px rgba(24, 52, 77, 0.12);
+}
+
+.destination-card img {
+    display: block;
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.destination-info {
+    padding: 22px;
+}
+
+.destination-country {
+    color: var(--azul-gris);
+    font-size: 13px;
+    margin: 0;
+}
+
+.destination-info h3 {
+    color: var(--azul-profundo);
+    font-size: 23px;
+    margin: 6px 0;
+}
+
+.destination-info > p:not(.destination-country) {
+    color: #627384;
+    font-size: 14px;
+    min-height: 44px;
+}
+
+.destination-link {
+    display: inline-block;
+    margin-top: 10px;
+    color: var(--azul-profundo);
+    font-weight: bold;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.destination-link:hover {
+    text-decoration: underline;
+}
+
+
+@media (max-width: 850px) {
+    .destination-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 550px) {
+    .destinations {
+        padding: 48px 0;
+    }
+
+    .destination-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .destination-card img {
+        height: 230px;
+    }
+}
+
+
+.planner {
+    padding: 70px 0;
+}
+
+.planner-form {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 36px;
+    background-color: var(--blanco);
+    border: 1px solid var(--gris-azulado);
+    border-radius: 18px;
+    box-shadow: 0 12px 32px rgba(24, 52, 77, 0.06);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 22px;
+}
+
+.form-group label {
+    color: var(--azul-profundo);
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 13px 14px;
+    border: 1px solid #C8D4DF;
+    border-radius: 9px;
+    background-color: #FFFFFF;
+    color: var(--texto);
+    font: inherit;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: 2px solid var(--azul-gris);
+    outline-offset: 2px;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.planner-form .btn-primary {
+    border: none;
+    background-color: var(--azul-profundo);
+    color: var(--blanco);
+    cursor: pointer;
+    font: inherit;
+    font-weight: bold;
+}
+
+.planner-form .btn-primary:hover {
+    background-color: var(--azul-gris);
+}
+
+.form-message {
+    margin-bottom: 0;
+    color: var(--azul-profundo);
+}
+
+@media (max-width: 550px) {
+    .planner {
+        padding: 45px 0;
+    }
+
+    .planner-form {
+        padding: 22px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+}
+
+.saved-trips {
+    padding: 70px 0;
+}
+
+.trips-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.trip-card {
+    background-color: var(--blanco);
+    border: 1px solid var(--gris-azulado);
+    border-radius: 14px;
+    padding: 24px;
+}
+
+.trip-card h3 {
+    color: var(--azul-profundo);
+    margin-top: 0;
+}
+
+.trip-card p {
+    color: #627384;
+    overflow-wrap: anywhere;
+}
+
+.trip-card strong {
+    color: var(--azul-profundo);
+}
+
+.delete-trip {
+    border: none;
+    border-radius: 8px;
+    padding: 10px 16px;
+    background-color: #F1E4E4;
+    color: #873C3C;
+    cursor: pointer;
+    font: inherit;
+    font-weight: bold;
+}
+
+.delete-trip:hover {
+    background-color: #E8D0D0;
+}
+
+.empty-trips {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 30px;
+    color: #627384;
+    background-color: var(--blanco);
+    border: 1px dashed var(--gris-azulado);
+    border-radius: 14px;
+}
+
+@media (max-width: 650px) {
+    .trips-list {
+        grid-template-columns: 1fr;
+    }
+
+    .saved-trips {
+        padding: 45px 0;
+    }
+}
+
+.favorites {
+    padding: 70px 0;
+    background-color: var(--fondo-claro);
+}
+
+.favorites-list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.favorite-card {
+    background-color: var(--blanco);
+    border: 1px solid var(--gris-azulado);
+    border-radius: 14px;
+    padding: 20px;
+}
+
+.favorite-card h3 {
+    color: var(--azul-profundo);
+    margin-top: 0;
+}
+
+.favorite-card p {
+    color: #627384;
+}
+
+.favorite-button {
+    border: none;
+    border-radius: 8px;
+    padding: 10px 16px;
+    background-color: var(--azul-profundo);
+    color: var(--blanco);
+    cursor: pointer;
+    font: inherit;
+}
+
+.favorite-button:hover {
+    background-color: var(--azul-gris);
+}
+
+.empty-favorites {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 30px;
+    color: #627384;
+    background-color: var(--blanco);
+    border: 1px dashed var(--gris-azulado);
+    border-radius: 14px;
+}
+
+@media (max-width: 800px) {
+    .favorites-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 550px) {
+    .favorites-list {
+        grid-template-columns: 1fr;
+    }
+
+    .favorites {
+        padding: 45px 0;
+    }
+}
+
+.destination-detail {
+    padding: 70px 0;
+}
+
+.detail-card {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 28px;
+    background-color: var(--blanco);
+    border: 1px solid var(--gris-azulado);
+    border-radius: 14px;
+    box-shadow: 0 8px 24px rgba(24, 52, 77, 0.06);
+}
+
+.detail-card p {
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--gris-azulado);
+    color: #627384;
+}
+
+.detail-card p:last-child {
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.detail-card strong {
+    color: var(--azul-profundo);
+}
+
+.weather-section {
+    padding: 70px 0;
+    background-color: var(--fondo-claro);
+}
+
+.weather-card {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 28px;
+    background-color: var(--blanco);
+    border: 1px solid var(--gris-azulado);
+    border-radius: 14px;
+}
+
+.weather-card h3 {
+    color: var(--azul-profundo);
+}
+
+.weather-card label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--texto);
+    font-weight: 600;
+}
+
+.weather-card select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--gris-azulado);
+    border-radius: 8px;
+    background-color: var(--blanco);
+    color: var(--texto);
+    font: inherit;
+}
+
+.weather-result {
+    margin-top: 20px;
+    padding: 16px;
+    border-radius: 8px;
+    background-color: var(--fondo-claro);
+    color: var(--texto);
+}
+
+.forecast-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 12px;
+    margin-top: 16px;
+}
+
+.forecast-day {
+    padding: 18px 12px;
+    text-align: center;
+    background-color: #FFFFFF;
+    border: 1px solid #D8E2EB;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(24, 52, 77, 0.06);
+}
+
+.forecast-day h5 {
+    margin: 0 0 14px;
+    color: #54758D;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.forecast-temperature {
+    margin: 0 0 8px;
+    color: #18344D;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.forecast-minimum {
+    margin: 0;
+    color: #718294;
+    font-size: 13px;
+}
+
+
+
+.weather-metrics {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    margin: 20px 0 28px;
+}
+
+.weather-metric {
+    padding: 18px 14px;
+    border: 1px solid rgba(148, 163, 184, 0.2);
+    border-radius: 16px;
+    background: rgba(148, 163, 184, 0.08);
+    min-width: 0;
+}
+
+.weather-metric-icon {
+    display: block;
+    font-size: 24px;
+    margin-bottom: 12px;
+}
+
+.weather-metric p {
+    margin: 0 0 8px;
+    color: #aab8ca;
+    font-size: 13px;
+}
+
+.weather-metric strong {
+    display: block;
+    color: #f3f7fc;
+    font-size: clamp(17px, 4vw, 23px);
+    overflow-wrap: anywhere;
+}
+
+.forecast-title {
+    margin: 24px 0 14px;
+    color: #f3f7fc;
+    font-size: 18px;
+}
+
+.forecast-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.forecast-day {
+    padding: 14px 12px;
+    border: 1px solid rgba(148, 163, 184, 0.2);
+    border-radius: 14px;
+    background: rgba(148, 163, 184, 0.06);
+    min-width: 0;
+}
+
+.forecast-date {
+    margin: 0 0 12px;
+    color: #cbd5e1;
+    text-transform: capitalize;
+    font-size: 13px;
+}
+
+.forecast-temperatures {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    font-size: 13px;
+}
+
+.forecast-max {
+    color: #f3f7fc;
+    font-weight: 600;
+}
+
+.forecast-min {
+    color: #9eafc4;
+}
+
+@media (max-width: 480px) {
+    .weather-card {
+        padding: 18px;
+    }
+
+    .weather-metrics {
+        gap: 9px;
+    }
+
+    .weather-metric {
+        padding: 14px 11px;
+    }
+
+    .forecast-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .forecast-day {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .forecast-date {
+        margin: 0;
+    }
+}
+
+
+
+
+.weather-metrics {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 10px;
+    margin: 16px 0 24px;
+}
+
+.weather-metric {
+    padding: 14px 12px;
+    border: 1px solid var(--border-color, #dbe3ec);
+    border-radius: 12px;
+    background: var(--card-background, #ffffff);
+    min-width: 0;
+}
+
+.weather-metric-icon {
+    display: block;
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.weather-metric p {
+    margin: 0 0 6px;
+    color: var(--text-secondary, #64748b);
+    font-size: 12px;
+}
+
+.weather-metric strong {
+    display: block;
+    color: var(--text-color, #1e293b);
+    font-size: 18px;
+    overflow-wrap: anywhere;
+}
+
+.forecast-title {
+    margin: 20px 0 12px;
+    color: var(--text-color, #1e293b);
+    font-size: 17px;
+}
+
+.forecast-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.forecast-day {
+    padding: 12px;
+    border: 1px solid var(--border-color, #dbe3ec);
+    border-radius: 12px;
+    background: var(--card-background, #ffffff);
+    min-width: 0;
+}
+
+.forecast-date {
+    margin: 0 0 10px;
+    color: var(--text-secondary, #64748b);
+    text-transform: capitalize;
+    font-size: 12px;
+}
+
+.forecast-temperatures {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    font-size: 12px;
+}
+
+.forecast-max {
+    color: var(--text-color, #1e293b);
+    font-weight: 600;
+}
+
+.forecast-min {
+    color: var(--text-secondary, #64748b);
+}
+
+@media (max-width: 800px) {
+    .weather-metrics {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .forecast-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .weather-card {
+        padding: 16px;
+    }
+
+    .weather-metric {
+        padding: 12px 10px;
+    }
+
+    .weather-metric strong {
+        font-size: 16px;
+    }
+
+    .forecast-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .forecast-day {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .forecast-date {
+        margin: 0;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .weather-card {
+        padding: 18px;
+    }
+
+    .weather-metrics {
+        gap: 9px;
+    }
+
+    .weather-metric {
+        padding: 14px 11px;
+    }
+
+    .forecast-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .forecast-day {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .forecast-date {
+        margin: 0;
+    }
+}
+
+
+.theme-toggle {
+    padding: 9px 14px;
+    border: 1px solid var(--border-color, #cbd5e1);
+    border-radius: 10px;
+    background: var(--card-background, #ffffff);
+    color: var(--text-color, #1e293b);
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.theme-toggle:hover {
+    opacity: 0.85;
+}
+
+@media (max-width: 900px) {
+    .navbar {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .theme-toggle {
+        margin-left: auto;
+    }
+}
+
+
+.weather-card,
+.weather-metric,
+.forecast-day {
+    background-color: var(--card-background);
+    color: var(--text-color);
+    border-color: var(--border-color);
+}
+
+.weather-metric p,
+.forecast-date,
+.forecast-min {
+    color: var(--text-secondary);
+}
+
+.weather-metric strong,
+.forecast-max,
+.forecast-title {
+    color: var(--text-color);
+}
+
+
+:root[data-theme="dark"] main h1,
+:root[data-theme="dark"] main h2,
+:root[data-theme="dark"] main h3,
+:root[data-theme="dark"] main h4,
+:root[data-theme="dark"] main p,
+:root[data-theme="dark"] main label,
+:root[data-theme="dark"] main li,
+:root[data-theme="dark"] main strong,
+:root[data-theme="dark"] main legend {
+    color: var(--text-color);
+}
+
+:root[data-theme="dark"] main a:not(.button) {
+    color: #B8D8F0;
+}
+
+:root[data-theme="dark"] main input,
+:root[data-theme="dark"] main select,
+:root[data-theme="dark"] main textarea {
+    background-color: var(--card-background);
+    color: var(--text-color);
+    border-color: var(--border-color);
+}
+
+:root[data-theme="dark"] main input::placeholder,
+:root[data-theme="dark"] main textarea::placeholder {
+    color: var(--text-secondary);
+}
+
+
+:root[data-theme="dark"] .destination-card,
+:root[data-theme="dark"] .destination-detail,
+:root[data-theme="dark"] .trip-card,
+:root[data-theme="dark"] .favorite-card {
+    background-color: var(--card-background);
+    color: var(--text-color);
+    border-color: var(--border-color);
+}
+
+:root[data-theme="dark"] .destination-card h2,
+:root[data-theme="dark"] .destination-card h3,
+:root[data-theme="dark"] .destination-card h4,
+:root[data-theme="dark"] .destination-card p,
+:root[data-theme="dark"] .destination-detail h2,
+:root[data-theme="dark"] .destination-detail h3,
+:root[data-theme="dark"] .destination-detail p,
+:root[data-theme="dark"] .trip-card h2,
+:root[data-theme="dark"] .trip-card h3,
+:root[data-theme="dark"] .trip-card p {
+    color: var(--text-color);
+}
+
+:root[data-theme="dark"] .destination-card a,
+:root[data-theme="dark"] .destination-detail a {
+    color: #B8D8F0;
+}
+
+
+:root[data-theme="dark"] main {
+    color: var(--text-color);
+}
+
+:root[data-theme="dark"] main section,
+:root[data-theme="dark"] main article,
+:root[data-theme="dark"] .destination-card,
+:root[data-theme="dark"] .destination-detail,
+:root[data-theme="dark"] .weather-card,
+:root[data-theme="dark"] .trip-form,
+:root[data-theme="dark"] .planner-form,
+:root[data-theme="dark"] .form-card,
+:root[data-theme="dark"] .favorite-card {
+    background-color: var(--card-background);
+    color: var(--text-color);
+    border-color: var(--border-color);
+}
+
+:root[data-theme="dark"] main h1,
+:root[data-theme="dark"] main h2,
+:root[data-theme="dark"] main h3,
+:root[data-theme="dark"] main h4,
+:root[data-theme="dark"] main p,
+:root[data-theme="dark"] main label,
+:root[data-theme="dark"] main legend,
+:root[data-theme="dark"] main li,
+:root[data-theme="dark"] main strong {
+    color: var(--text-color);
+}
+
+:root[data-theme="dark"] main input,
+:root[data-theme="dark"] main select,
+:root[data-theme="dark"] main textarea {
+    background-color: #223449;
+    color: #F1F5F9;
+    border-color: #52677D;
+}
+
+:root[data-theme="dark"] main input::placeholder,
+:root[data-theme="dark"] main textarea::placeholder {
+    color: #B8C7D8;
+}
+
+:root[data-theme="dark"] main button {
+    color: #FFFFFF;
+}
+
+:root[data-theme="dark"] main a {
+    color: #B8D8F0;
+}
+
+
+:root[data-theme="dark"] .destination-detail .detail-card,
+:root[data-theme="dark"] .destination-detail .country-info,
+:root[data-theme="dark"] .destination-detail .info-card,
+:root[data-theme="dark"] .destination-detail .detail-item,
+:root[data-theme="dark"] .destination-detail .destination-info {
+    background-color: var(--card-background);
+    color: var(--text-color);
+    border-color: var(--border-color);
+}
+
+:root[data-theme="dark"] .destination-detail [id^="paris-"] {
+    color: var(--text-color);
+}
+
+
+:root[data-theme="dark"] .hero a,
+:root[data-theme="dark"] .hero .button,
+:root[data-theme="dark"] .hero .btn {
+    background-color: #F1F5F9;
+    color: #18344D;
+    border-color: #F1F5F9;
+}
+
+
+:root[data-theme="dark"] button[id*="delete"],
+:root[data-theme="dark"] button[id*="remove"],
+:root[data-theme="dark"] button[class*="delete"],
+:root[data-theme="dark"] button[class*="remove"],
+:root[data-theme="dark"] .delete-trip,
+:root[data-theme="dark"] .delete-button {
+    color: #FFFFFF;
+    background-color: #C62828;
+    border-color: #EF4444;
+}
+
+:root[data-theme="dark"] button[id*="delete"]:hover,
+:root[data-theme="dark"] button[id*="remove"]:hover,
+:root[data-theme="dark"] button[class*="delete"]:hover,
+:root[data-theme="dark"] button[class*="remove"]:hover,
+:root[data-theme="dark"] .delete-trip:hover,
+:root[data-theme="dark"] .delete-button:hover {
+    background-color: #991B1B;
+    border-color: #F87171;
+}
+
+
+:root[data-theme="dark"] .hero a,
+:root[data-theme="dark"] .hero a[href="#destinos"],
+:root[data-theme="dark"] a[href="#destinos"] {
+    background-color: #F1F5F9;
+    color: #18344D;
+    border-color: #F1F5F9;
+}
+
+:root[data-theme="dark"] .hero a[href="#destinos"]:hover,
+:root[data-theme="dark"] a[href="#destinos"]:hover {
+    background-color: #D8E2EB;
+    color: #18344D;
+}
+
+
+:root[data-theme="dark"] #mis-viajes p,
+:root[data-theme="dark"] #mis-viajes .empty-state,
+:root[data-theme="dark"] #mis-viajes .empty-message {
+    color: #263746;
+}
+
+:root[data-theme="dark"] #mis-viajes .empty-state,
+:root[data-theme="dark"] #mis-viajes .empty-message {
+    background-color: #FFFFFF;
+}
+
+:root[data-theme="dark"] #mis-viajes .section-heading p,
+:root[data-theme="dark"] #mis-viajes .section-heading .eyebrow-dark {
+    color: #FFFFFF;
+}
+
+
+:root[data-theme="dark"] #weather-destination {
+    background-color: #1B2A3B;
+    color: #F1F5F9;
+    border: 1px solid #52677D;
+    color-scheme: dark;
+}
+
+:root[data-theme="dark"] #weather-destination option {
+    background-color: #1B2A3B;
+    color: #F1F5F9;
+}
+
+
+:root[data-theme="dark"] .navbar .nav-links a {
+    background: transparent;
+    color: #F1F5F9;
+    border-color: transparent;
+    box-shadow: none;
+}
+
+:root[data-theme="dark"] .navbar .nav-links a:hover {
+    background: #263B52;
+    color: #FFFFFF;
+}
+
+.weather-icon-img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    display: block;
+    filter: invert(19%) sepia(25%) saturate(1200%) hue-rotate(169deg) brightness(85%);
+}
+
+:root[data-theme="dark"] .weather-icon-img {
+    filter: brightness(0) invert(1);
+}
