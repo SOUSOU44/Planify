@@ -1,0 +1,265 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planify | Planifica tu próximo viaje</title> 
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+
+  
+<header>
+    <nav class="navbar">
+        <a href="index.html" class="logo">PLANIFY</a>
+
+<ul class="nav-links">
+    <li><a href="#inicio">Inicio</a></li>
+    <li><a href="#destinos">Destinos</a></li>
+    <li><a href="#planificar">Planificar viaje</a></li>
+    <li><a href="#favoritos">Favoritos</a></li>
+    <li><a href="#mis-viajes">Mis viajes</a></li>
+</ul>
+
+<button id="theme-toggle" class="theme-toggle" type="button" aria-label="Activar modo claro">
+    ☀️ Modo claro
+</button>
+
+    </nav>
+</header>
+
+
+<main>
+    <section class="hero" id="inicio">
+        <div class="hero-content">
+            <p class="eyebrow">TU PRÓXIMA AVENTURA</p>
+
+            <h1>El mundo te espera.<br>Vamos a descubrirlo.</h1>
+
+            <p class="hero-description">
+                Explora ciudades increíbles, descubre nuevos lugares
+                y organiza el viaje que siempre has soñado.
+            </p>
+
+            <a href="#destinos" class="btn-primary">
+                Explorar destinos
+            </a>
+        </div>
+    </section>
+    
+<section class="destinations" id="destinos">
+
+    <div class="section-heading">
+        <p class="eyebrow-dark">INSPÍRATE Y DESCUBRE</p>
+        <h2>Encuentra tu próximo destino</h2>
+        <p>Hay un lugar esperando convertirse en tu próxima aventura.</p>
+    </div>
+
+    <div class="destination-grid">
+
+        <article class="destination-card">
+            <img
+                src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=800&q=80"
+                alt="Vista de la Torre Eiffel en París"
+            >
+            <div class="destination-info">
+                <p class="destination-country">Francia</p>
+                <h3>París</h3>
+                <p>Arte, arquitectura y rincones inolvidables.</p>
+                <a href="#detalle-paris" class="destination-link">Ver detalles →</a>
+                    <button class="favorite-button" data-destination="París">♡ Añadir a favoritos</button>
+                    Descubrir destino →
+                </a>
+            </div>
+        </article>
+
+        <article class="destination-card">
+            <img
+                src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=800&q=80"
+                alt="Casas coloridas en la costa italiana"
+            >
+            <div class="destination-info">
+                <p class="destination-country">Italia</p>
+                <h3>Cinque Terre</h3>
+                <p>Pueblos coloridos y paisajes junto al mar.</p>
+                <a href="#detalle-cinque-terre" class="destination-link">Ver detalles →</a>
+                    <button class="favorite-button" data-destination="Cinque Terre">♡ Añadir a favoritos</button>
+                    Descubrir destino →
+                </a>
+            </div>
+        </article>
+
+        <article class="destination-card">
+            <img
+                src="https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=800&q=80"
+                alt="Edificios y calles de una gran ciudad"
+            >
+            <div class="destination-info">
+                <p class="destination-country">Estados Unidos</p>
+                <h3>Nueva York</h3>
+                <p>Una ciudad vibrante llena de experiencias.</p>
+                <a href="#detalle-nueva-york" class="destination-link">Ver detalles →</a>
+                    <button class="favorite-button" data-destination="Nueva York">♡ Añadir a favoritos</button>
+                    Descubrir destino →
+                </a>
+            </div>
+        </article>
+
+       </div>
+</section>
+
+<section class="favorites" id="favoritos">
+    <div class="section-heading">
+        <p class="eyebrow-dark">TUS LUGARES PREFERIDOS</p>
+        <h2>Destinos favoritos</h2>
+        <p>Guarda los lugares que sueñas visitar y encuéntralos aquí.</p>
+    </div>
+    <div class="favorites-list" id="favorites-list"></div>
+</section>
+
+<section class="destination-detail" id="detalle-paris">
+    <div class="section-heading">
+        <p class="eyebrow-dark">DESCUBRE EL DESTINO</p>
+        <h2>París, Francia</h2>
+        <p>Conocida por su arquitectura, sus museos y la emblemática Torre Eiffel.</p>
+    </div>
+
+<div class="detail-card" id="paris-country-info">
+    <p><strong>País:</strong> <span id="paris-country">Francia</span></p>
+    <p><strong>Capital:</strong> <span id="paris-capital">París</span></p>
+    <p><strong>Idioma:</strong> <span id="paris-language">Francés</span></p>
+    <p><strong>Moneda:</strong> <span id="paris-currency">Euro (EUR)</span></p>
+</div>
+
+</section>
+
+<section class="destination-detail" id="detalle-cinque-terre">
+    <div class="section-heading">
+        <p class="eyebrow-dark">DESCUBRE EL DESTINO</p>
+        <h2>Cinque Terre, Italia</h2>
+        <p>Un conjunto de cinco pueblos costeros famosos por sus casas coloridas y sus paisajes junto al mar de Liguria.</p>
+    </div>
+    <div class="detail-card">
+        <p><strong>País:</strong> Italia</p>
+        <p><strong>Región:</strong> Liguria</p>
+        <p><strong>Idioma:</strong> Italiano</p>
+        <p><strong>Moneda:</strong> Euro (EUR)</p>
+    </div>
+</section>
+
+<section class="destination-detail" id="detalle-nueva-york">
+    <div class="section-heading">
+        <p class="eyebrow-dark">DESCUBRE EL DESTINO</p>
+        <h2>Nueva York, Estados Unidos</h2>
+        <p>Una ciudad vibrante, famosa por sus rascacielos, sus parques y sus lugares emblemáticos.</p>
+    </div>
+    <div class="detail-card">
+        <p><strong>País:</strong> Estados Unidos</p>
+        <p><strong>Estado:</strong> Nueva York</p>
+        <p><strong>Idioma:</strong> Inglés</p>
+        <p><strong>Moneda:</strong> Dólar estadounidense (USD)</p>
+    </div>
+</section>
+
+
+<section class="weather-section" id="clima">
+    <div class="section-heading">
+        <p class="eyebrow-dark">CONSULTA ANTES DE VIAJAR</p>
+        <h2>El clima de tu destino</h2>
+        <p>Prepárate para tu próxima aventura y ten en cuenta el tiempo.</p>
+    </div>
+
+    <div class="weather-card">
+        <h3>Consulta meteorológica</h3>
+
+        <label for="weather-destination">Selecciona un destino</label>
+
+        <select id="weather-destination">
+            <option value="Paris">París, Francia</option>
+            <option value="Rome">Cinque Terre, Italia</option>
+            <option value="New York">Nueva York, Estados Unidos</option>
+        </select>
+
+        <div id="weather-result" class="weather-result">
+            <p class="weather-placeholder">
+                Selecciona un destino para consultar su clima.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="planner" id="planificar">
+    <div class="section-heading">
+        <p class="eyebrow-dark">TU VIAJE, A TU MANERA</p>
+        <h2>Planifica tu próxima aventura</h2>
+        <p>Completa los datos y comienza a organizar una experiencia inolvidable.</p>
+    </div>
+
+    <form class="planner-form" id="planner-form">
+        <div class="form-group">
+            <label for="trip-name">Nombre del viaje</label>
+            <input type="text" id="trip-name" name="trip-name" placeholder="Ej. Vacaciones soñadas" required>
+        </div>
+
+        <div class="form-group">
+            <label for="trip-destination">Destino</label>
+            <input type="text" id="trip-destination" name="trip-destination" placeholder="¿A dónde quieres ir?" required>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label for="departure-date">Fecha de salida</label>
+                <input type="date" id="departure-date" name="departure-date" required>
+            </div>
+
+            <div class="form-group">
+                <label for="return-date">Fecha de regreso</label>
+                <input type="date" id="return-date" name="return-date" required>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label for="travelers">Número de viajeros</label>
+                <input type="number" id="travelers" name="travelers" min="1" max="50" value="1" required>
+            </div>
+
+            <div class="form-group">
+                <label for="budget">Presupuesto estimado</label>
+                <input type="number" id="budget" name="budget" min="0" placeholder="Ej. 1500000" required>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="trip-comments">Comentarios o preferencias</label>
+            <textarea id="trip-comments" name="trip-comments" rows="4" placeholder="Cuéntanos qué te gustaría hacer..."></textarea>
+        </div>
+
+        <button type="submit" class="btn-primary">Crear mi plan</button>
+
+        <p class="form-message" id="form-message" aria-live="polite"></p>
+    </form>
+</section>
+
+<section class="saved-trips" id="mis-viajes">
+    <div class="section-heading">
+        <p class="eyebrow-dark">TUS PLANES</p>
+        <h2>Mis viajes</h2>
+        <p>Todos tus viajes organizados en un solo lugar.</p>
+    </div>
+
+    <div class="trips-list" id="trips-list"></div>
+</section>
+
+</main>
+
+
+    <footer>
+        <p>&copy; 2026 Planify. Todos los derechos reservados.</p>
+    </footer>
+
+<script src="scripts/app.js"></script>
+
+</body>
+</html>
