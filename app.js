@@ -219,22 +219,22 @@ const weatherMetrics = [
     {
         label: "Temperatura actual",
         value: `${weather.temperature_2m} °C`,
-        icon: '<img src="icons/temperature-high.svg" alt="" class="weather-icon-img">'
+        icon: '<img src="temperature-high.svg" alt="" class="weather-icon-img">'
     },
     {
         label: "Sensación térmica",
         value: `${weather.apparent_temperature} °C`,
-        icon: '<img src="icons/clouds-sun.svg" alt="" class="weather-icon-img">'
+        icon: '<img src="clouds-sun.svg" alt="" class="weather-icon-img">'
     },
     {
         label: "Humedad",
         value: `${weather.relative_humidity_2m}%`,
-        icon: '<img src="icons/skin-drop.svg" alt="" class="weather-icon-img">'
+        icon: '<img src="skin-drop.svg" alt="" class="weather-icon-img">'
     },
     {
         label: "Viento",
         value: `${weather.wind_speed_10m} km/h`,
-        icon: '<img src="icons/wind.svg" alt="" class="weather-icon-img">'
+        icon: '<img src="wind.svg" alt="" class="weather-icon-img">'
     }
 ];
 const metricsGrid = document.createElement("div");
